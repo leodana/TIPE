@@ -1,3 +1,14 @@
+Mon TIPE consiste à étudier le groupe des tresses d'Artin et ses propriétés afin de pouvoir en déduire un système de cryptographie utilisant des tresses au lieu des nombres, et de voir la viabilité de ce système. 
+Pour cela, je m'intéresse au problème du mot dans le groupe des tresses, mais aussi au problème de conjugaison qui est plus compliqué à résoudre.  
+Par définition, le groupe des tresses à n brins est un groupe engendré par n-1 générateurs et leurs inverses dans ce groupe et qui entretiennent des relations entre eux. 
+Ce sont ces relations qui donnent sa particularité au groupe. On peut représenter les éléments de ce groupe par des tresses, d'où son nom, mais aussi par des mots sur l'alphabet des générateurs du groupe. 
+Je me suis intéressé dans ce groupe à plusieurs de ses propriétés utiles pour les algorithmes qui me servent à la cryptographie à base de tresses, comme la forme normale des tresses ou l'ordre total de Dehornoy sur ce groupe. 
+Afin de résoudre le problème du mot, c'est-à-dire de savoir si deux tresses sont les mêmes dans deux représentations différentes, j'ai utilisé l'algorithme de retournement. 
+En appliquant deux fois cet algorithme à la différence de deux tresses, il permet de vérifier si cette différence est la tresse nulle et donc de savoir si les tresses sont équivalentes. 
+L'algorithme de retournement permet aussi de trouver une forme unique pour une tresse, en imposant en plus quelques conditions sur l'ordre des facteurs dans les sous-tresses positives et négatives. 
+En ce qui concerne la cryptographie, j'ai adapté des protocoles de cryptographie à clé publique aux groupes des tresses en me ramenant au cas de sous-groupes commutatifs. 
+Je n'ai malheureusement pas eu le temps de m'intéresser aux différentes attaques cryptographiques sur le groupe des tresses, comme la résolution du problème de conjugaison ou des attaques spécifiques sur la forme normale.
+
 ## opération sur les tresses (le sens positif des tresses est de gauche à droite) : une tresse est représentée par sous forme de liste, ou chaque élément est un doublet où le premier élément est le sens de la tresse, et le second le numéro le numéro du générateur. 
 
 def somme_tresses(T1,T2):
